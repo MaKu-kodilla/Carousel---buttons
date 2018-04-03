@@ -2,7 +2,7 @@ body {
     background-color: oldlace;
     overflow: hidden;
 }
-body h1 {
+h1 {
     text-align: center;
     padding-bottom: 20px;
     font-size: 35px;
@@ -39,10 +39,12 @@ body h1 {
 #carousel li {
     list-style: none;  
     float: left;
+    position: relative;
 }
 .button {
     position: absolute;
     opacity: 0.8;
+    z-index: 10;
 }
 #button-prev {
     top: 50%;
@@ -59,6 +61,23 @@ body h1 {
     color: white;
     border: none;
     background: none;
+}
+[data-slide]::after {
+    display: inline-block;
+    content: attr(data-slide);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    background: rgba(255, 255, 255, .5);
+}
+.carousel-nav {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
 }
 
 
