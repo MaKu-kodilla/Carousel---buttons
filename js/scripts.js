@@ -5,6 +5,8 @@ $(function() {
     var timerId;
     var currentImageIndex = 0;
     var numberOfImages = $('#carousel img').length;
+    $('body').hide();
+    $('body').fadeIn(2000);
     
     function runInterval() {
         timerId = setInterval(function () {
