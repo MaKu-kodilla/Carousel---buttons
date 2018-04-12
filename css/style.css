@@ -1,5 +1,6 @@
 body {
     background-color: oldlace;
+    overflow: hidden;
 }
 body h1 {
     text-align: center;

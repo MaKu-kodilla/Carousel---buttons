@@ -3,10 +3,9 @@
 $(function() {
     var carouselList = $('#carousel ul');
     var timerId;
-    var currentImageIndex = 0;
-    var numberOfImages = $('#carousel img').length;
     $('body').hide();
     $('body').fadeIn(2000);
+
     
     function runInterval() {
         timerId = setInterval(function () {
@@ -19,12 +18,8 @@ $(function() {
         }, 3000);
     }
 
-   function stopInterval() {
+    function stopInterval() {
         clearInterval(timerId);
-    }
-
-    function setCurrentImage (imageIndex) {
-        
     }
 
     $("#carousel ul").mouseenter(stopInterval);
